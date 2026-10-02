@@ -1,0 +1,4 @@
+/** Page loader: provides the initial branded loading transition. */
+"use client";
+import {motion,AnimatePresence} from "framer-motion";import {useEffect,useState} from "react";
+export default function PageLoader(){const [show,setShow]=useState(true);useEffect(()=>{const t=setTimeout(()=>setShow(false),650);return()=>clearTimeout(t)},[]);return <AnimatePresence>{show&&<motion.div initial={{opacity:1}} exit={{opacity:0}} transition={{duration:.45}} className="fixed inset-0 z-[100] grid place-items-center bg-[#08090b]"><motion.div initial={{scale:.7,opacity:0}} animate={{scale:1,opacity:1}} className="text-center"><div className="mx-auto mb-4 h-2 w-2 rounded-full bg-white shadow-[0_0_40px_12px_rgba(255,255,255,.35)]"/><p className="text-xs uppercase tracking-[.35em] text-zinc-400">Loading portfolio</p></motion.div></motion.div>}</AnimatePresence>}
