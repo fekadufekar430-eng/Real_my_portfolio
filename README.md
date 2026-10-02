@@ -70,4 +70,4 @@ Vercel provides first-class Next.js support and normally auto-detects the framew
 - LinkedIn: `https://www.linkedin.com/in/fikadu-fikir-a44862425/`
 - Telegram: `@F6ike`
 
-WhatsApp and Facebook remain intentionally unlinked until their real details are provided.
+ Facebook remain intentionally unlinked until their real details are provided.

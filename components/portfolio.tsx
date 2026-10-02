@@ -1,7 +1,7 @@
 "use client";
 
 /** Main portfolio page: navigation, sections, interactive cards, and hero motion. */
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion,type Variants } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -14,9 +14,18 @@ import { useState, type PointerEvent as ReactPointerEvent } from "react";
 import ThemeToggle from "./theme-toggle";
 import PageLoader from "./page-loader";
 
+
+
+
+
 const navItems = ["Home", "About", "Services", "Portfolio", "Skills", "Blog"];
 
-const reveal = {
+// const reveal = {
+//   hidden: { opacity: 0, y: 34 },
+//   show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
+// };
+
+const reveal: Variants = {
   hidden: { opacity: 0, y: 34 },
   show: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } },
 };
